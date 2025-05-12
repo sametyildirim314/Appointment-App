@@ -1,0 +1,125 @@
+:root {
+  /* Modern color palette */
+  --primary: #d5d6e3d9;
+  --primary-dark: #4f46e5;
+  --secondary: #0ea5e9;
+  --accent: #f43f5e;
+  --background: #ffffff;
+  --background-dark: #0f172a;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --text-dark: #f8fafc;
+  --border: #e2e8f0;
+  --border-dark: #334155;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  
+  /* Typography */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* Modern defaults */
+  color-scheme: light dark;
+  color: var(--text);
+  background-color: var(--background);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern link styles */
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Modern body styles */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background) 0%, #f8fafc 100%);
+}
+
+/* Modern heading styles */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+/* Modern button styles */
+button {
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--text-dark);
+    background-color: var(--background-dark);
+  }
+  
+  body {
+    background: linear-gradient(135deg, var(--background-dark) 0%, #1e293b 100%);
+  }
+  
+  button {
+    background-color: var(--primary-dark);
+  }
+  
+  button:hover {
+    background-color: var(--primary);
+  }
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
